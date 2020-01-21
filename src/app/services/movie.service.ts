@@ -14,7 +14,7 @@ export enum SearchType {
     providedIn: 'root'
 })
 export class MovieService {
-    url = 'http://www.omdbapi.com';
+    url = 'http://www.omdbapi.com/';
     apiKey = '86de7433';
 
     constructor(private http: HttpClient) {
@@ -22,7 +22,7 @@ export class MovieService {
 
     searchData(title: string, type: SearchType): Observable<any> {
       return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`).pipe(
-          map(results => results['Search'])
+          map(results => results["Search"])
       );
     }
 
