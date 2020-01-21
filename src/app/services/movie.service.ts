@@ -10,7 +10,6 @@ export enum SearchType {
     episode = 'episode'
 }
 
-
 @Injectable({
     providedIn: 'root'
 })
